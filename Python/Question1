@@ -1,0 +1,16 @@
+def challenge(l):
+    opt1 = ( not((( (l[7]) & (l[6]) )^( (l[5]) & (l[4]) ))^( (l[7]) & (l[6]) )))
+    opt2 = (not((not(( (l[3]) | (l[2]) )^( (l[1]) & (l[0]) )))^( (l[1]) & (l[0]) )))
+    opt3 = (not(( (l[3]) | (l[2]) )|( (l[5]) & (l[4]) )))^(( (l[7]) & (l[6]) )^( (l[5]) & (l[4]) ))
+    opt4 = (not((not(( (l[5]) & (l[4]) )|( (l[2]) | (l[3]) )))|(not(( (l[3]) | (l[2]) )^( (l[0]) & (l[1]) )))))
+    if( opt1 and opt2 and opt3 and opt4 ):
+        return True
+    return False
+
+l = [] # your input goes here
+
+if( challenge(l) ):
+    print "Yaayy....you solved it :)"
+else:
+    print "Wrong input....try again :("
+
